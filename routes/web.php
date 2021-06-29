@@ -20,8 +20,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/home', function () {
-    return view('home');
+Route::get('/', function () {
+    return redirect('posts');
 })->name('home');
 Route::get('/users/{user:username}/posts', [UserPostController::class, 'index'])->name('users.posts');
 Route::get('/login', [LoginController::class, 'index'])->name('login');
