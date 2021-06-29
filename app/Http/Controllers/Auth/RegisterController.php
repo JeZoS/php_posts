@@ -40,6 +40,6 @@ class RegisterController extends Controller
             'password' => $request->password
         ]);
 
-        return redirect()->route('dashboard');
+        return redirect()->route('posts');
     }
 }
